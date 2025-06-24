@@ -28,7 +28,6 @@ namespace WebAspApp.Services
             return product == null ? null : _mapper.Map<ProductDTO>(product);
         }
 
-        // ✅ Správná implementace s ProductCreateDTO
         public async Task<ProductDTO> AddAsync(ProductCreateDTO dto)
         {
             var product = _mapper.Map<Product>(dto);
